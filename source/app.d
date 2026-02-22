@@ -1,5 +1,6 @@
 import std.stdio;
 
+import repl;
 import help;
 
 void main(string[] args)
@@ -9,6 +10,7 @@ void main(string[] args)
     /* 
     * if no args given, then start interpreter in REPL mode
     */
+    repl.run();
   }
   else if (args.length == 3)
   {
