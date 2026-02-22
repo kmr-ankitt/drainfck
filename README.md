@@ -1,3 +1,3 @@
 # Drainfck
 
-Brainf*ck interprter in D. For getting hold in D.
+Brainf*ck interpreter in D. For getting hold in D.
