@@ -1,0 +1,5 @@
+name "drainfck"
+description "Brainf*ck interpreter in D"
+authors "ankit"
+copyright "Copyright © 2026, ankit"
+license "MIT"

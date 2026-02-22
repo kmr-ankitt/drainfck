@@ -1,0 +1,17 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/drainfck
+drainfck.so
+drainfck.dylib
+drainfck.dll
+libdrainfck.a
+drainfck.a
+drainfck.lib
+drainfck-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
