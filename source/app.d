@@ -25,8 +25,28 @@ void main(string[] args)
 
     string operation = args[1];
     string filename = args[2];
-    writefln("operation: %s, filename: %s", operation, filename);
-    // run(file);
+    char[2] extension = [filename[$ - 2], filename[$ - 1]];
+
+    if (extension != "bf")
+    {
+      help.run();
+      return;
+    }
+
+    switch (operation)
+    {
+    case "compile":
+      writeln("Compiling ", filename, "...");
+      break;
+
+    case "run":
+      writeln("Running ", filename, "...");
+      break;
+
+    default:
+      help.run();
+      break;
+    }
   }
   else
   {
