@@ -29,7 +29,7 @@ void main(string[] args)
     string fileName = args[2];
     char[2] extension = [fileName[$ - 2], fileName[$ - 1]];
 
-    if (extension != "bf" && operation != "run")
+    if (extension != "bf" || operation != "run")
     {
       help.run();
       return;
