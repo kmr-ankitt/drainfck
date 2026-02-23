@@ -33,19 +33,14 @@ void main(string[] args)
       return;
     }
 
-    switch (operation)
+    if (operation == "run")
     {
-    case "compile":
       writeln("Compiling ", filename, "...");
-      break;
-
-    case "run":
-      writeln("Running ", filename, "...");
-      break;
-
-    default:
+    }
+    else
+    {
       help.run();
-      break;
+      return;
     }
   }
   else
