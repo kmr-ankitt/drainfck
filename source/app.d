@@ -2,6 +2,8 @@ import std.stdio;
 
 import repl;
 import help;
+import lexer;
+import utils;
 
 void main(string[] args)
 {
@@ -24,24 +26,17 @@ void main(string[] args)
     */
 
     string operation = args[1];
-    string filename = args[2];
-    char[2] extension = [filename[$ - 2], filename[$ - 1]];
+    string fileName = args[2];
+    char[2] extension = [fileName[$ - 2], fileName[$ - 1]];
 
-    if (extension != "bf")
+    if (extension != "bf" && operation != "run")
     {
       help.run();
       return;
     }
-
-    if (operation == "run")
-    {
-      writeln("Compiling ", filename, "...");
-    }
-    else
-    {
-      help.run();
-      return;
-    }
+    
+    string fileContent = utils.readFile(fileName);
+    lexer.lex(fileContent);
   }
   else
   {
